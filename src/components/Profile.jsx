@@ -19,7 +19,8 @@ const Profile = () => {
   console.log('username: ', username)
   const user = users.find((user) => user.name === username)
   if (!user) {
-    return <Navigate to='/' />
+    // return <Navigate to='/' />
+    return <div>Profile page</div>
   }
   return <div>{JSON.stringify(user, null, 2)}</div>
 }

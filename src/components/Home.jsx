@@ -8,6 +8,7 @@ const Home = () => {
   }
   return (
     <div>
+      <div>Home page</div>
       <button onClick={handleClick}>Show Profile Page</button>
     </div>
   )
