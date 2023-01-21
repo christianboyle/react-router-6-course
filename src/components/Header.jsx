@@ -21,6 +21,14 @@ const Header = () => {
             Profile
           </NavLink>
         </li>
+        <li>
+          <NavLink
+            to='/register'
+            className={({ isActive }) => (isActive ? 'highlight' : '')}
+          >
+            Register
+          </NavLink>
+        </li>
       </ul>
     </>
   )
