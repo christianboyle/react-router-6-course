@@ -17,12 +17,10 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <Header />
     <Routes>
       <Route path='/' element={<Home />} />
-      {/* <Route path='/profile' element={<Profile />} /> */}
-      <Route path='/profile/:username' element={<UserInfo />} />
+      <Route path='/profile/:username' element={<Profile />} />
       <Route path='/register' element={<Register />} />
       <Route path='/details' element={<UserDetails />} />
-      <Route path='*' element={<NotFound />} />
-      {/* <Route path='*' element={<Navigate to='/' />} /> */}
+      <Route path='*' element={<Navigate to='/' />} />
     </Routes>
   </BrowserRouter>
 )

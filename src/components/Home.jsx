@@ -1,10 +1,12 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 
 const Home = () => {
+  const location = useLocation()
+  console.log(location)
   const navigate = useNavigate()
   const handleClick = () => {
-    navigate('/profile')
+    navigate('/profile/jerry', { state: { username: 'Something else' } })
   }
   return (
     <div>
