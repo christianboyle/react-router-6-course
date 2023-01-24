@@ -5,10 +5,9 @@ import App from './App'
 import Home from './components/Home'
 import Profile from './components/Profile'
 import Header from './components/Header'
-import NotFound from './components/NotFound'
-import UserInfo from './components/UserInfo'
 import Register from './components/Register'
 import UserDetails from './components/UserDetails'
+import Products from './components/Products'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './index.css'
 
@@ -20,6 +19,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <Route path='/profile/:username' element={<Profile />} />
       <Route path='/register' element={<Register />} />
       <Route path='/details' element={<UserDetails />} />
+      <Route path='/products' element={<Products />} />
       <Route path='*' element={<Navigate to='/' />} />
     </Routes>
   </BrowserRouter>
