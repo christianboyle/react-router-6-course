@@ -37,6 +37,14 @@ const Header = () => {
             Products
           </NavLink>
         </li>
+        <li>
+          <NavLink
+            to='/profile-nested'
+            className={({ isActive }) => (isActive ? 'highlight' : '')}
+          >
+            Nested Profile
+          </NavLink>
+        </li>
       </ul>
     </>
   )
