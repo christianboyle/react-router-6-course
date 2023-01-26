@@ -9,6 +9,8 @@ import Register from './components/Register'
 import UserDetails from './components/UserDetails'
 import Products from './components/Products'
 import ProfileNested from './components/ProfileNested'
+import Friend from './components/Friend'
+import Friends from './components/Friends'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './index.css'
 
@@ -21,7 +23,10 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <Route path='/register' element={<Register />} />
       <Route path='/details' element={<UserDetails />} />
       <Route path='/products' element={<Products />} />
-      <Route path='/profile-nested/*' element={<ProfileNested />} />
+      <Route path='/profile-nested' element={<ProfileNested />}>
+        <Route path='friends' element={<Friends />} />
+        <Route path=':name' element={<Friend />} />
+      </Route>
       <Route path='*' element={<Navigate to='/' />} />
     </Routes>
   </BrowserRouter>
