@@ -14,6 +14,8 @@ import Friends from './components/Friends'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './index.css'
 
+const isLoggedIn = false
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <BrowserRouter>
     <Header />
@@ -23,7 +25,10 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <Route path='/register' element={<Register />} />
       <Route path='/details' element={<UserDetails />} />
       <Route path='/products' element={<Products />} />
-      <Route path='/profile-nested' element={<ProfileNested />}>
+      <Route
+        path='/profile-nested'
+        element={<ProfileNested isLoggedIn={isLoggedIn} />}
+      >
         <Route path='friends' element={<Friends />} />
         <Route path=':name' element={<Friend />} />
       </Route>
